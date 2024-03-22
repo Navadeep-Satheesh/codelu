@@ -1,16 +1,16 @@
-import React from "react";
 
-function DashBoard(){
-
-
-    return (
-
-        <div className="dashboard">
-            this is dashboard
+const Dashboard = () => {
+  return (
+    <div className="Dashboard-body">
+        <div className="red-container">
+            <div className="black-container">
+                <img src="../assets/Bitmoji.png" alt="Avatar" className="bitimage" />
+            </div>
         </div>
-    )
-
-
+      
+    </div>
+  )
 }
 
-export default DashBoard
+export default Dashboard
+
