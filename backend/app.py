@@ -9,6 +9,11 @@ app.config["SECRET_KEY"] = "codelu"
 connection = connector.connect( user = "root", host = "127.0.0.1" , password = "password", database = "mindmentor")
 cursor = connection.cursor()
 
+def connect():
+    connection = connector.connect( user = "root", host = "127.0.0.1" , password = "password", database = "mindmentor")
+    cursor = connection.cursor()
+    return connection , cursor 
+
 
 def token_required(f):
     @wraps(f)
@@ -31,8 +36,10 @@ def token_required(f):
 
 @app.route("/signin" , methods  = ["GET", "POST"])
 def signin():
+
+    connection , cursor =  connect()
     d = request.json 
-    email = d.get("username")
+    email = d.get("email")
     password = d.get("password")
 
     cursor.execute(f"select * from users where email = '{email}'")
@@ -78,7 +85,7 @@ def check_login():
         payload = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"],ignoreExpiration=True)
         return jsonify({ "loggedIn": True }) , 200
     except jwt.InvalidTokenError:
-        return jsonify(loggedIn=True), 401
+        return jsonify({ "loggedIn": False }), 200
     
     
 @app.route('/courses',methods=['GET','POST'])
