@@ -51,3 +51,79 @@
     font-size: 70px;
     color: white;
 }
+
+.signInPage{
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(240.81deg, #090633 6.79%, #180A14 67.77%, #1F0202 99.57%, #081F41 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.sign_in_container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.317);
+    width: 30vw;
+    height: 60vh;
+
+}
+
+.sign_in_container h3{
+
+    color: white;
+    margin-bottom: 40px;
+}
+
+.sign_in_container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign_in_container input{
+
+    font-size: 18px;
+    padding: 6px;
+    margin : 10px;
+    background-color: rgba(255, 255, 255, 0.858);
+    border: 0px;
+    outline: 0px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(223, 223, 223, 0.338);
+   
+}
+
+.sign_in_container input:focus{
+    border:  1px solid rgb(206, 252, 255) ;
+}
+
+.login{
+
+    background-color: rgb(189, 189, 255);
+    background-color: rgb(233, 37, 37);
+    color: white;
+    padding: 10px 20px;
+    border: 0px;
+    margin-top: 20px;
+    color: white;
+
+}
+
+.login:hover{
+
+    background-color: rgb(246, 0, 0);
+}

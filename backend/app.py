@@ -79,7 +79,7 @@ def signup():
     return ( '' , 200)
 
 
-@app.route('/check_login', methods=["GET"])
+@app.route('/check_login', methods=["GET", "POST"])
 def check_login():
     token = request.cookies.get("token")
 
@@ -88,6 +88,7 @@ def check_login():
 
     try:
         payload = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"],ignoreExpiration=True)
+        return jsonify({ "loggedIn": True }) , 200
     except jwt.InvalidTokenError:
         return jsonify(loggedIn=True), 401
     
