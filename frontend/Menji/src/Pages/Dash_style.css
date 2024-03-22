@@ -21,7 +21,8 @@ body {
 {
     font-family: 'Russo-One', sans-serif;
     width:400px;
-    background-color:rgb(165, 136, 136);
+    
+    
     height:50px;
     display:flex;
     justify-content:center;
@@ -29,7 +30,6 @@ body {
 }
 .left
 {
-    background-color: green;
     width:750px;
     height:720px;
     display:flex;
@@ -38,11 +38,22 @@ body {
     font-family: 'Russo-One', sans-serif;
     padding:300px;
 }
+
 .task
 {
+    font-size:20px;
+    align-items:center;
     font-family: 'Russo-One', sans-serif;
     width:400px;
-    background-color:brown;
+
+
+background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%);
+opacity: 0.29;
+border: 3px solid #dccece;
+font-color:white;
+
+
+
     height:50px;
     display:flex;
     justify-content:center;

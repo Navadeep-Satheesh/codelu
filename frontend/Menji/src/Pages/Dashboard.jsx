@@ -4,6 +4,7 @@ const Dashboard = () => {
   return (
     <div className="Parent">
         <div className="left">
+            
             <span className="Heading_task">Today's Mission</span>
             <div className="task">
                 Task1
@@ -14,7 +15,7 @@ const Dashboard = () => {
             <div className="task">
                 Task3
             </div>
-
+            
         </div>
         <div className="side-contents">
             <div className="red-container">
