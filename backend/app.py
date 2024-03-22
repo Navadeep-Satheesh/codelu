@@ -67,6 +67,23 @@ def signup():
     return ( '' , 200)
 
 
+@app.route('/check_login', methods=["GET"])
+def check_login():
+    token = request.cookies.get("token")
+
+    if not token:
+        token=""
+
+    try:
+        payload = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"],ignoreExpiration=True)
+    except jwt.InvalidTokenError:
+        return jsonify({'message': 'Invalid token!'}), 401
+
+    
+    
+
+
+
 
 
 
