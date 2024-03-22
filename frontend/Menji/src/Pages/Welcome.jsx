@@ -1,4 +1,5 @@
 import React  from "react";
+import "../css/welcome.css"
 
 function Welcome(){
 
@@ -8,7 +9,7 @@ function Welcome(){
 
         <div className="welcome">
 
-                This is a welcome page
+                <div className="welcome_topbar"></div>
 
         </div>
             
