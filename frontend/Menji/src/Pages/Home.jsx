@@ -20,7 +20,7 @@ const Home = () => {
       
       </BrowserRouter>
       <h1>
-        Home Page
+        DashBoard
       </h1>
     </div>
   )
