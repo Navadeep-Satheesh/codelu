@@ -11,6 +11,8 @@ import Courses from "./Courses.jsx";
 const Home = () => {
   return (
     <div>
+
+        
       <Router>
       <Routes>
         <Route index element = { <Dashboard />} />

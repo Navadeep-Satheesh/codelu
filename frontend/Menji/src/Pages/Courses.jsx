@@ -7,5 +7,5 @@ const Courses = () => {
     )
   }
   
-  export default AskUs
+  export default Courses
   

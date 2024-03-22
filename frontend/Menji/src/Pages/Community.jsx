@@ -7,5 +7,5 @@ const Community = () => {
     )
   }
   
-  export default AskUs
+  export default Community
   
