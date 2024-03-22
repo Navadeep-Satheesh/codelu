@@ -78,6 +78,22 @@ def check_login():
         payload = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"],ignoreExpiration=True)
     except jwt.InvalidTokenError:
         return jsonify(loggedIn=True), 401
+    
+    
+@app.route('/courses',methods=['GET','POST'])
+def get_courses():
+    token=request.cookies.get("token")
+    d=request.json()
+    email=d.get("email")
+    cursor.execute(f"select userid from users where email='{email}'")
+    userid=cursor.fetchone()
+    cursor.execute(f"select coursename from courses where userid='{userid}'")
+    courses = cursor.fetchall()
+    course_list = [course[0] for course in courses]
+    return jsonify({'courses': course_list}), 200
+    
+    
+        
 
     
     
