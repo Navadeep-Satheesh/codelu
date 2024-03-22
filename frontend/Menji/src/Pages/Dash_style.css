@@ -12,6 +12,7 @@ body {
     
     background: linear-gradient(240.81deg, #0E0855 6.79%, #251120 67.77%, #1F0202 99.57%, #E1EDFF 100%);
 }
+
 .Parent
 {
     display: flex;
@@ -46,10 +47,11 @@ body {
 }
 /* .red-container{
     
-width: 190.83px;
+width: 190px;
 height: 150px;
-left: 1083.64px;
+left: 900px;
 top: 96px;
+padding: 100px 100px;
 
 background: #0F0404;
 border: 1px solid #F13C3C;
@@ -60,10 +62,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .red_container{
     border: 1px solid red;
-    width: 190.83px;
-height: 213px;
+    width: 20px;
+    height: 50px;
     background-color: red;
-    padding: 20px;
+    padding: 100px 100px;
     
 }
 .details{
@@ -86,6 +88,8 @@ height: 213px;
 .Chechi
 {
 
+    height:190px;
+    width:180px;
     background-color: black;
     border: 3px solid red;
     
