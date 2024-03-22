@@ -1,4 +1,53 @@
-.body{
 
-    background-color: black;
+
+.welcome{
+    
+    background: linear-gradient(240.81deg, #090633 6.79%, #180A14 67.77%, #1F0202 99.57%, #081F41 100%);
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+}
+
+.welcome_topbar{
+
+    background-color: rgba(0, 0, 0, 0.055);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}   
+
+.welcome_topbar h3{
+    color: white;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+.welcome_signin{
+
+    background-color: rgba(255, 255, 255, 0.852);
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0px;
+    margin-right: 10px;
+}
+.welcome_main{
+
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.welcome_main h1{
+    font-size: 70px;
+    color: white;
 }

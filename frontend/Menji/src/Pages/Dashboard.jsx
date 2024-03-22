@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const Dashboard = () => {
   return (
@@ -13,3 +14,4 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+

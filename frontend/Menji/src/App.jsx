@@ -13,9 +13,11 @@ function App() {
 
   var  [signedIn , setSignedIn ] = useState(false);
 
-  fetch("localhost:5000/check_login", {
+  fetch("/api/check_login", {
     method: "POST" , 
     headers:{
+
+      "access-control-allow-origin" : "*",
       "Content-Type" : "application/json"
     }, 
     body: ""
@@ -24,6 +26,7 @@ function App() {
   }).then((responseJson)=>{
 
       if(responseJson['loggedIn']){
+        console.log("singed in")  
         setSignedIn(true);
       }
 
@@ -32,11 +35,10 @@ function App() {
   return (
     <>
 
-
-    thi is app.js
+   
 
     {
-      (!signedIn)&& <Welcome/>
+      (signedIn == false) && <Welcome/>
       
     }
 
