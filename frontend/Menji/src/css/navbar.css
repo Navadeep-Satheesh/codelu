@@ -1,0 +1,123 @@
+.navbar {
+    background-color: #0b0b0b;
+    height: 98vh;
+    width: 5vw;
+    margin: 8px;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 10;
+    /* overflow: hidden; */
+
+
+}
+
+.links {
+    list-style: none;
+    /* background-color: green; */
+    /* width: max-content; */
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 0px;
+
+}
+
+.links li {
+
+
+    /* background-color: red; */
+
+    display: flex;
+    transition: 0.2s;
+    align-items: center;
+    justify-content: center;
+    /* width: 12vw; */
+    /* width: 50%; */
+    margin: 10px;
+    overflow: visible;
+    position: relative;
+
+}
+
+.links li:hover{
+    background-color: rgb(203, 203, 203);
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    overflow: visible;
+    position: relative;
+    transition: 1s;
+
+    /* left: 20px;   */
+}
+
+.links li span {
+    /* background-color: beige; */
+    position: relative;
+    left: 0px;
+    top: 0px;
+
+    /* border: 5px solid blue; */
+    font-size: 0.9rem;
+    font-weight: normal;
+
+    display: flex;
+
+    text-align: left;
+    overflow: visible;
+
+    min-width: 10vw;
+    color : white;
+
+
+}
+
+.links li img {
+    margin: 3%;
+    color: white;
+    fill: white;
+    aspect-ratio: 1/1;
+    width: 150%;
+    /* height: 26px; */
+
+}
+
+.link li img path{
+    fill: white;
+}
+
+.show_hide {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 0px;
+    position: absolute;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    top: 30px;
+    transform: translate(-50%);
+    left: 100%;
+}
+
+.show_hide img {
+    width: 60%;
+    transition: 0.4s;
+}

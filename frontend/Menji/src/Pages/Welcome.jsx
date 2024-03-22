@@ -2,9 +2,42 @@ import React from "react";
 import "../css/welcome.css"
 import { useState } from "react";
 
-function Welcome() {
+function Welcome(props) {
 
-    let [signInPage, setSignInPage] = useState(true);
+    function login(event){
+
+        event.preventDefault();
+
+        let email = document.getElementsByClassName("email")[0].value;
+        let password = document.getElementsByClassName("password")[0].value;
+
+        
+
+        fetch("/api/signin", {
+
+
+            method : "POST" ,
+            headers: {
+                "Content-Type": "application/json"
+            }, 
+            body: JSON.stringify( {
+                email: email, 
+                password : password
+            })
+        }).then((response)=>{
+
+            return response.json()
+        }).then((responseJson)=>{
+
+            console.log(responseJson)
+            if(responseJson['result']==2){
+                
+                props.setSignedIn(true)
+            }
+        })
+    }
+
+    let [signInPage, setSignInPage] = useState(false);
 
     return (
 
@@ -39,7 +72,7 @@ function Welcome() {
                             <input type="text" placeholder = "Username" className="email" required />
                             <input type="text" className="password" placeholder="Password" required />
 
-                            <button className="login" >LOGIN</button>
+                            <button className="login" onClick={(event)=>{login(event)}} >LOGIN</button>
 
                             </form>
 

@@ -7,6 +7,8 @@ import Dashboard from "./Dashboard.jsx";
 import Community from "./Community.jsx";
 import Courses from "./Courses.jsx";
 
+import NavBar from './navbar.jsx';
+
 
 const Home = () => {
   return (
@@ -14,6 +16,7 @@ const Home = () => {
 
         
       <Router>
+        <NavBar/>
       <Routes>
         <Route index element = { <Dashboard />} />
         <Route path="/AskUs" element = { <AskUs/>} />
