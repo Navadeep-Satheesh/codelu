@@ -11,7 +11,7 @@ import Welcome from "./Pages/Welcome"
 
 function App() {
 
-  var  [signedIn , setSignedIn ] = useState(false);
+  var  [signedIn , setSignedIn ] = useState(true);
 
   fetch("/api/check_login", {
     method: "POST" , 
