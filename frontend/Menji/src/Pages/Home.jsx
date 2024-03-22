@@ -1,4 +1,5 @@
-import { BrowserRouter as Routes,Routes,Route, BrowserRouter} from 'react-router-dom';
+
+import { BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom';
 // import Home from "./Pages/Home.jsx";
 // import LoginPage from "./Pages/LoginPage.jsx";
 import AskUs from "./AskUs.jsx";
@@ -10,7 +11,7 @@ import Courses from "./Courses.jsx";
 const Home = () => {
   return (
     <div>
-      <BrowserRouter>
+      <Router>
       <Routes>
         <Route index element = { <Dashboard />} />
         <Route path="/AskUs" element = { <AskUs/>} />
@@ -18,7 +19,7 @@ const Home = () => {
         <Route path="/Courses" element = { <Courses/>} />
       </Routes>
       
-      </BrowserRouter>
+      </Router>
       <h1>
         DashBoard
       </h1>
@@ -28,3 +29,4 @@ const Home = () => {
  
 
 export default Home
+

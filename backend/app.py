@@ -77,7 +77,7 @@ def check_login():
     try:
         payload = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"],ignoreExpiration=True)
     except jwt.InvalidTokenError:
-        return jsonify({'message': 'Invalid token!'}), 401
+        return jsonify(loggedIn=True), 401
 
     
     
