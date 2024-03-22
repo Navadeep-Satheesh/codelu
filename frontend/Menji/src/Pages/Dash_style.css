@@ -17,33 +17,52 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.Heading_task
+{
+    font-family: 'Russo-One', sans-serif;
+    width:400px;
+    background-color:rgb(165, 136, 136);
+    height:50px;
+    display:flex;
+    justify-content:center;
+    padding:50px
+}
+.left
+{
+    background-color: green;
+    width:750px;
+    height:720px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    font-family: 'Russo-One', sans-serif;
+    padding:300px;
+}
+.task
+{
+    font-family: 'Russo-One', sans-serif;
+    width:400px;
+    background-color:brown;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    padding:50px
+}
 .side-contents
 {
 
     color: white;
     display:flex;
     flex-direction:column;  
-    /* background-color: white; */
     width: 30vw;
     align-items: center;
     justify-content: center;
     /* align-items: center; */
     justify-content: left;
-
     padding: 20px;
-    
-    
+    font-family: 'Silkscreen', sans-serif;
+}
 
-}
-.left
-{
-    background-color: green;
-    width:673px;
-    height:720px;
-    display:flex;
-    flex-direction: column;
-    justify-content:;
-}
 /* .red-container{
     
 width: 190.83px;
