@@ -70,7 +70,9 @@ def signup():
 
     cursor.execute(f"insert into users valuess( default , '{full_name}' , '{username}' , '{email}' ,  '{password}' , 0)")
     connection.commit()
+    
     cursor.execute(f"select userid from users where email='{email}'")
+    cursor.execute(f"insert into friends values('{userid}','{full_name}','{userid}')")
     userid=cursor.fetchone()
     
     session['email']=email
@@ -153,7 +155,7 @@ def get_user_communities():
     return jsonify(response_data),200
 
 @app.route('/friends',methods=['POST','DELETE'])
-def leaderboard():
+def leaderboard ():
     userid=session.get('userid')
     d=request.json
     method=d.get("method")
@@ -163,21 +165,20 @@ def leaderboard():
         data=cursor.fetchall()
         cursor.execute(f"insert into table friends values('{data[0]}','{data[1]}','{userid}')")
         connection.commit()
-        cursor.execute(f"select username,level,score,fullname from users where username='{f_username}'")
-        new=cursor.fetchall()
-        response_data={
-            "f_username":"new[0]",
-            "fname":"new[3]",
-            "level":"new[1]",
-            "score":"new[2]"
-        }
-        return jsonify(response_data),200
+        cursor.execute(f"SELECT f.fid, u.username,u.fullname, u.score,u.level FROM friends f JOIN users u ON f.fid = u.userid WHERE u.userid = '{userid}' ORDER BY u.score ASC;")
+        friends=cursor.fetchall()
+        return jsonify(friends),200
     elif(method=='DELETE'):
         f_username=d.get("username")
         userid=session.get("userid")
         cursor.execute(f"select userid from users where username='{f_username}'")
         fid=cursor.fetchone()
         cursor.execute(f"delete from friends where userid='{userid}'and fid='{fid}'")
+        connection.commit()
+        cursor.execute(f"SELECT f.fid, u.username,u.fullname, u.score,u.level FROM friends f JOIN users u ON f.fid = u.userid WHERE u.userid = '{userid}' ORDER BY u.score ASC;")
+        friends=cursor.fetchall()
+        return jsonify(friends),200
+        
     
    
     
