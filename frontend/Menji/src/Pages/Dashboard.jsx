@@ -4,6 +4,7 @@ const Dashboard = () => {
   return (
     <div className="Parent">
         <div className="left">
+            
             <span className="Heading_task">Today's Mission</span>
             <div className="task">
                 Task1
@@ -14,9 +15,9 @@ const Dashboard = () => {
             <div className="task">
                 Task3
             </div>
-
+            
         </div>
-        <div className="side-contents">
+        <div className="right">
             <div className="red-container">
                 <img src={Bitmoji} alt="Logo" className="Chechi" />
             </div>
@@ -30,8 +31,10 @@ const Dashboard = () => {
             </div>
             <div className="Missions">
                 <span className="Missions">Missions</span>
-                <li className="myMission">Front-End Development</li>
-                <li className="myMission">Back-End Development</li>
+                <div className="red-card">
+                <span className="myMission">Back-End Development</span>
+                <span className="myMission">Front-End Development</span>
+                </div>
             </div>
         </div>
     </div>
