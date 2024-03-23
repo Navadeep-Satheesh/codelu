@@ -1,7 +1,24 @@
 import Bitmoji from "../assets/Images/Bitmoji.png";
 import "./Dash_style.css";
+import {useState, useEffect} from 'react';
 
 const Dashboard = () => {
+    const[details,setDetails] = useState(null);
+    useEffect(() => {
+        fetch('/Dashboard/', {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            setDetails(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }, []);
   return (
     <div className="Parent">
         <h1 className="mainHeading">DASH BOARD</h1>
@@ -9,33 +26,11 @@ const Dashboard = () => {
             
             <span className="Heading_task">Today's Mission</span>
             <div className="allTasks">
-                <div className="task">
-                    Task1
-                </div>
-                <div className="task">
-                    Task2
-                </div>
-                <div className="task">
-                    Task3
-                </div>
-                <div className="task">
-                    Task3
-                </div>
-                <div className="task">
-                    Task3
-                </div>
-                <div className="task">
-                    Task3
-                </div>
-                <div className="task">
-                    Task3
-                </div>
-                <div className="task">
-                    Task3
-                </div>
-                <div className="task">
-                    Task3
-                </div>
+            { (details!=null)? details['tasks'].map((d) => (
+                        <div className="task">{d}</div>
+                    )) : <span className="task">NO TASKS FOR TODAY</span> } 
+                
+                
             </div>
         </div>
         <div className="right">
@@ -55,11 +50,17 @@ const Dashboard = () => {
 
                 <div className="Mission-Container">
                     <span className="Missions">Missions</span>
-                    <div className="red-card">
-                        <span className="myMission">Front-End Development</span>
-                    </div>
-                    <div className="red-card">
-                        <span className="myMission">Back-End Development</span>
+                    <div className="allMission">
+                        <div className="red-card">
+                        { (details!=null)? details['tasks'].map((d) => (
+                        <span className="myMission">{d}</span>
+                    )) : <span className="myMission">NO TASKS FOR TODAY</span> } 
+                    
+                            {/* <span className="myMission">Front-End Development</span>
+                        </div>
+                        <div className="red-card">
+                            <span className="myMission">Back-End Development</span> */}
+                        </div>
                     </div>
                     
                 </div>
