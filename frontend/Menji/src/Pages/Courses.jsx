@@ -1,11 +1,17 @@
+import { Outlet } from "react-router-dom"
 
-const Courses = () => {
+function Courses(){
+
     return (
-      <div>
-        <h1>Ask us Page to communicate with AI</h1>
+
+      <div className="courses">
+
+        <Outlet/>
+
       </div>
+
     )
-  }
-  
-  export default Courses
-  
+
+}
+
+export default Courses

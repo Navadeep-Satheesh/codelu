@@ -1,0 +1,86 @@
+.courses{
+    
+    background: linear-gradient(240.81deg, #090633 6.79%, #180A14 67.77%, #1F0202 99.57%, #081F41 100%);
+    /* background: rgb(16, 16, 16); */
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.courses_container{
+
+    width: 90vw;
+    height: 100vh;
+    margin-left: 9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.allCourses{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,  minmax( 400px , 400px) );
+    row-gap: 100px;
+}
+
+.singleCourse {
+
+    height: 400px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 300px;
+    padding: 40px;
+    flex-direction: column;
+    /* width: 400px; */
+    background-color: rgb(39, 39, 39);
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.singleCourse h3{
+    margin-bottom: 30px;
+    color: white;
+   
+}
+
+.singleCourse p{
+    color: rgb(186, 186, 186) ;
+    margin-bottom: 20px;
+    height: 50%;
+    /* background-color: green; */
+}
+
+.singleCourse button{
+    
+    background-color: rgb(250, 85, 85);
+    color: white;
+    width: 50%;
+    border: 0px;
+    padding: 10px 10px;
+    /* position: relative; */
+    /* bottom: 30px; */
+}
+
+.singleCourse button:hover{
+    background-color: red;
+}

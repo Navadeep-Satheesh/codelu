@@ -6,6 +6,9 @@ import AskUs from "./AskUs.jsx";
 import Dashboard from "./Dashboard.jsx";
 import Community from "./Community.jsx";
 import Courses from "./Courses.jsx";
+import CourseDetails from './CourseDetails.jsx';
+import AllCourses from './AllCourses.jsx';
+
 
 import NavBar from './navbar.jsx';
 
@@ -19,15 +22,22 @@ const Home = () => {
         <NavBar/>
       <Routes>
         <Route index element = { <Dashboard />} />
-        <Route path="/AskUs" element = { <AskUs/>} />
+        <Route path="/chatbot" element = { <AskUs/>} />
         <Route path="/Communitty" element = { <Community/>} />
-        <Route path="/Courses" element = { <Courses/>} />
+        <Route path="/Courses" element = { <Courses/> } > 
+            
+            
+            <Route path =""  element= {  <AllCourses/> } />
+            <Route path =":course_id"  element= {  <CourseDetails/> } />
+        
+        </Route>
+
       </Routes>
       
       </Router>
-      <h1>
-        DashBoard
-      </h1>
+    
+    
+    
     </div>
   )
 }

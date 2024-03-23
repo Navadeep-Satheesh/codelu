@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap'); /*Silk screen*/
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Silkscreen:wght@400;700&display=swap');/*Russo One*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background: linear-gradient(240.81deg, #0E0855 6.79%, #251120 67.77%, #1F0202 99.57%, #E1EDFF 100%);
+}
+.Parent
+{
+    display: flex;
+    justify-content: space-between;
+}
+.Heading_task
+{
+    font-family: 'Russo-One', sans-serif;
+    width:400px;
+    
+    
+    height:50px;
+    display:flex;
+    justify-content:center;
+    padding:50px
+}
+.left
+{
+    width:750px;
+    height:720px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    font-family: 'Russo-One', sans-serif;
+    padding:300px;
+}
+
+.task
+{
+    font-size:20px;
+    align-items:center;
+    font-family: 'Russo-One', sans-serif;
+    width:400px;
+
+
+background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%);
+opacity: 0.29;
+border: 3px solid #dccece;
+font-color:white;
+
+
+
+    height:50px;
+    display:flex;
+    justify-content:center;
+    padding:50px
+}
+.side-contents
+{
+
+    color: white;
+    display:flex;
+    flex-direction:column;  
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    /* align-items: center; */
+    justify-content: left;
+    padding: 20px;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+/* .red-container{
+    
+width: 190.83px;
+height: 150px;
+left: 1083.64px;
+top: 96px;
+
+background: #0F0404;
+border: 1px solid #F13C3C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+
+
+.red_container{
+    border: 1px solid red;
+    width: 190.83px;
+height: 213px;
+    background-color: red;
+    padding: 20px;
+    
+}
+.details{
+    /* Rectangle 13 */
+    /* font-family:'Silkscreen',sans-serif; */
+    width:347px;
+    /* height:161px; */
+    display:flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: max-content;
+
+}
+
+.Missions{
+    /* background-color: red; */
+}
+
+.Chechi
+{
+
+    background-color: black;
+    border: 3px solid red;
+    
+}
