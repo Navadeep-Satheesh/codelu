@@ -22,9 +22,6 @@ const Home = () => {
       </Routes>
       
       </Router>
-      <h1>
-        DashBoard
-      </h1>
     </div>
   )
 }
