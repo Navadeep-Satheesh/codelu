@@ -18,12 +18,24 @@ const Home = () => {
         <Route index element = { <Dashboard />} />
         <Route path="/AskUs" element = { <AskUs/>} />
         <Route path="/Community" element = { <Community/>}>
-          <Route path = "/Friends" element = { <Community/>} />
+          <Route path = "Community/Friends" element = { <Friends/>} />
           </Route>
         <Route path="/Courses" element = { <Courses/>} />
       </Routes>
       
       </Router>
+
+      {/* <Router>
+      <Routes>
+        <Route index element = { <Dashboard />} />
+        <Route path="/AskUs" element = { <AskUs/>} />
+        <Route path="/Community" element = { <Community/>}>
+          <Route path = "/Friends" element = { <Community/>} />
+          </Route>
+        <Route path="/Courses" element = { <Courses/>} />
+      </Routes>
+      
+      </Router> */}
     </div>
   )
 }
