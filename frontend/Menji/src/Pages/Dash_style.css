@@ -15,6 +15,7 @@ body {
     overflow-y:hidden;
     overflow-x: hidden;
 }
+
 .Parent
 {
     display: flex;
@@ -108,7 +109,9 @@ body {
     font-family: 'Russo-One', sans-serif;
     width:400px;
     font-size:30px;
+
     color:whiteblack;
+
     /* color: white; */
     background:none;
     
@@ -117,6 +120,7 @@ body {
     /* linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%); */
 
     height: 16vh;
+
     display:flex;
     justify-content:center;
     padding:50px
@@ -145,30 +149,46 @@ body {
     padding: 20px;
     font-family: 'Silkscreen', sans-serif;
 }
+
+
 .red_container{
     border: 1px solid red;
     width: 190.83px;
 height: 213px;
     background-color: red;
     padding: 20px;
+
 }
+
+
+
 .details{
     
     width:347px;
     background: linear-gradient(133.41deg, #b66b6b4b 26.56%, #526fbd33 92.42%);
     display:flex;
+    justify-content: left;
+    align-items: center;
     margin-bottom: 30px;
     flex-direction: column;
+
+
     width: max-content;
     font-family: 'Russo-one',sans-serif;
+
     padding:10px;
     margin:10px;
+
     
 
 }
+
+
+
 .Mission-Container {
     padding:20px;
 }
+
 .Missions{
     
     padding:5px;
@@ -220,9 +240,11 @@ text-fill-color: transparent;
 .Chechi
 {
 
-    background-color: black;
-    border: 3px solid red;
+    /* background-color: black;
+    border: 3px solid red; */
     width:222px;
     height:198.43;
+    left: 0px;
+    top: 96px;
     
 }
