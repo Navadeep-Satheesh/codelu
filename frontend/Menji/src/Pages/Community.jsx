@@ -1,11 +1,11 @@
+import React from 'react'
 
-const Community = () => {
-    return (
-      <div>
-        <h1>Communicate</h1>
-      </div>
-    )
-  }
-  
-  export default Community
-  
+function Community() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Community
