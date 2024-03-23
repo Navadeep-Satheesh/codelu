@@ -49,14 +49,9 @@ body {
     font-family: 'Russo-One', sans-serif;
     width:400px;
     font-size:30px;
-
-
     background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%);
     opacity: 0.29;
     border: 3px solid #d9bdbd;
-
-
-
     height:50px;
     display:flex;
     justify-content:center;
@@ -80,48 +75,48 @@ body {
 
 .red-container{
     
-width: 190px;
-height: 150px;
-left: 900px;
-top: 96px;
-padding: 100px 100px;
+    width: 190px;
+    height: 150px;
+    left: 900px;
+    top: 96px;
+    padding: 100px 100px;
 
-background: #0F0404;
-border: 1px solid #F13C3C;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #0F0404;
+    border: 1px solid #F13C3C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
 
 .details{
     /* Rectangle 13 */
-    font-family:'Silkscreen',sans-serif;
+    /* font-family:'Silkscreen',sans-serif; */
     width:347px;
-    height:161px;
+    /* height:161px; */
     display:flex;
     justify-content: left;
     align-items: center;
     margin-bottom: 30px;
     flex-direction: column;
-    background-color:none;
+    /* background-color:none; */
     border: none;
-    padding:20px;
+    padding:10px;
    
     width: max-content;
     font-family: 'Russo-one',sans-serif;
-    padding:10px;
+    
     
 
 }
 
   
   /* Style for the spans inside the box */
-.details span {
+/* .details span {
     color:white; 
     font-size: 16px; 
     text-align: left;
     display: block;
-}
+} */
   
 
 .Missions{
@@ -157,9 +152,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .Chechi
 {
 
-    background-color: black;
-    border: 3px solid red;
+    /* background-color: black;
+    border: 3px solid red; */
     width:222px;
     height:198.43;
+    left: 0px;
+    top: 96px;
     
 }
