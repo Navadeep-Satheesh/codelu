@@ -1,5 +1,6 @@
 
 import { BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 // import Home from "./Pages/Home.jsx";
 // import LoginPage from "./Pages/LoginPage.jsx";
 import AskUs from "./AskUs.jsx";
@@ -17,7 +18,11 @@ const Home = () => {
       <Routes>
         <Route index element = { <Dashboard />} />
         <Route path="/AskUs" element = { <AskUs/>} />
-        <Route path="/Communitty" element = { <Community/>} />
+        <Route path="/Community" element = { <Community/>}>
+          <Route path = "Friends" element = { <Community/>} />
+          
+          </Route>
+
         <Route path="/Courses" element = { <Courses/>} />
       </Routes>
       
