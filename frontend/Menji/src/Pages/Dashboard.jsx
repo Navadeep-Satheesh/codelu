@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 const Dashboard = () => {
     const[details,setDetails] = useState(null);
     useEffect(() => {
+
         fetch('/api/Dashboard', {
             method: "POST",
             headers: {
