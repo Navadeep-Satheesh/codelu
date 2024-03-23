@@ -11,7 +11,7 @@ const Friends  = () => {
   
   useEffect(()=>{
 
-      fetch('/api/',{
+      fetch('/api/friends',{
           method:"POST",
           headers:{
               "content-Type":"application/json"
@@ -25,9 +25,29 @@ const Friends  = () => {
           setData(data)
       })
   },[]);
+
+  ///
+
+useEffect(()=>{
+
+      fetch('/api/friends',{
+          method:"POST",
+          headers:{
+              "content-Type":"application/json"
+          },
+          body:JSON.stringify({
+              username:getElementById.target.value
+          })
+      }).then((response)=>{
+          return response.json() 
+      }).then((data)=>{
+          setData(data)
+      })
+  },[]);
+  //
   
 
-  fetch('/api/',{
+  fetch('/api/friends',{
     method:"DELETE",
     headers:{
         "content-Type":"application/json"
@@ -57,8 +77,11 @@ const Friends  = () => {
                       <input
                       type="text"
                       placeholder="search"
-                      
+
+
                       />
+                      <button onClick={()=>document.getElementById.target.value
+                      }>search</button>
                     
                     </div> :null
                   }
