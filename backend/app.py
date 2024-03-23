@@ -3,6 +3,18 @@ from datetime import datetime
 from functools import wraps
 import mysql.connector as connector
 import jwt
+from langchain.llms import OpenAI
+from langchain.chains import ConversationChain
+from langchain.chains.conversation.memory import ConversationBufferMemory
+
+
+openai_api_key = "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"
+
+llm =  OpenAI(openai_api_key = openai_api_key , temperature = 0.6)
+
+memory =  ConversationBufferMemory()
+
+conversation = ConversationChain(llm=llm  ,memory=memory)
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "codelu"
@@ -100,15 +112,50 @@ def check_login():
         return jsonify({ "loggedIn": False }), 200
     
     
-# @app.route('/courses',methods=['GET','POST'])
-# def get_courses():
-#     email=session.get('email')
-#     cursor.execute(f"select userid from users where email='{email}'")
-#     userid=cursor.fetchone()
-#     cursor.execute(f"select coursename from courses where userid='{userid}'")
-#     courses = cursor.fetchall()
-#     course_list = [course[0] for course in courses]
-#     return jsonify({'courses': course_list}), 200
+@app.route('/courses',methods=['GET','POST'])
+def get_courses():
+    # email=session.get('email')
+
+    connection , cursor = connect()
+    
+    userid = session['userid']
+    
+    cursor.execute(f"select * from courses where userid='{userid}'")
+    courses = cursor.fetchall()
+    # course_list = [course[0] for course in courses]
+    return jsonify(courses), 200
+
+@app.route("/course_details", methods = ["GET", "POST"])
+def course_details():
+
+    connection , cursor = connect()
+
+    d =  request.json 
+    userid = session.get("userid")
+    course_id = d.get("courseid")
+
+    print("the course is ", course_id)
+
+    cursor.execute(f"select * from courses where courseid = {course_id}")
+    course_data = cursor.fetchone()
+
+    cursor.execute(f"select * from tasks where course_id = {course_id}")
+    task_data =  cursor.fetchall()
+
+    data = {
+        'course_data': course_data , 
+        'tasks': task_data
+    }
+
+    return jsonify(data) , 200
+
+@app.route("/ask_us", methods = ["GET", "POST"])
+def askUs():
+    d = request.json 
+    query = d.get("query")
+    answer = conversation.predict(input  = query )    
+    return jsonify({'text':answer , 'sender': 'bot'}) ,  200
+
 
 @app.route('/dashboard')
 def dashboard():
@@ -149,49 +196,6 @@ def dashboard():
         return jsonify({'message': 'User not logged in'}), 401
     
     
-        
-
-    
-    
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = True, host = "0.0.0.0")
