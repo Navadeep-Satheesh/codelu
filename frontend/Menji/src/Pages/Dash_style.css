@@ -17,44 +17,64 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.side-contents
+.Heading_task
 {
-
-    color: white;
+    font-family: 'Russo-One', sans-serif;
+    width:400px;
+    
+    font-size:30px;
+    color:white;
+    height:50px;
     display:flex;
-    flex-direction:column;  
-    /* background-color: white; */
-    width: 30vw;
-    align-items: center;
-    justify-content: center;
-    /* align-items: center; */
-    justify-content: left;
-
-    padding: 20px;
-    
-    
-
+    justify-content:center;
+    padding:50px
 }
 .left
 {
-    background-color: green;
-    width:673px;
+    width:750px;
     height:720px;
     display:flex;
     flex-direction: column;
-    justify-content:;
-}
-/* .red-container{
+    justify-content:center;
+    font-family: 'Russo-One', sans-serif;
+    padding:300px;
     
-width: 190.83px;
-height: 150px;
-left: 1083.64px;
-top: 96px;
+}
 
-background: #0F0404;
-border: 1px solid #F13C3C;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-} */
+.task
+{
+    font-size:20px;
+    align-items:center;
+    font-family: 'Russo-One', sans-serif;
+    width:400px;
+    font-size:30px;
+
+
+    background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%);
+    opacity: 0.29;
+    border: 3px solid #d9bdbd;
+
+
+
+    height:50px;
+    display:flex;
+    justify-content:center;
+    padding:50px
+}
+.right
+{
+    background-color: blue;
+    color: white;
+    display:flex;
+    flex-direction:column;  
+    width: 30vw;
+    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* justify-content: left; */
+    padding: 20px;
+    font-family: 'Silkscreen', sans-serif;
+}
 
 
 
@@ -76,17 +96,68 @@ height: 213px;
     flex-direction: column;
     /* background-color: blue; */
     width: max-content;
+    font-family: 'Russo-one',sans-serif;
+    padding:10px;
+    
 
 }
 
 .Missions{
-    /* background-color: red; */
-}
+    list-style-type: none;
+    /* MISSIONS */
 
+
+width: 228px;
+height: 46px;
+left: 1046px;
+top: 486px;
+
+font-family: 'Russo One';
+font-style: normal;
+font-weight: 400;
+font-size: 38px;
+line-height: 46px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.11em;
+
+background: linear-gradient(90deg, #FDF3F3 0%, #000000 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+/* background-clip: text;
+stext-fill-color: transparent; */
+
+
+}
+.red-card {
+    /* Group 5 */
+
+/* Group 5 */
+
+/* Rectangle 9 */
+/* 
+    width: 300px;
+    height: 88.3px;
+    left: 970px;
+    top: 553px;
+
+    background: linear-gradient(90deg, #D91A1A 0%, #D8B9B9 77.6%); */
+
+
+
+
+
+
+}
+.myMission{
+
+}
 .Chechi
 {
 
     background-color: black;
     border: 3px solid red;
+    width:222px;
+    height:198.43;
     
 }
