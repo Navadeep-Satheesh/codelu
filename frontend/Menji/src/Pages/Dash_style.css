@@ -15,35 +15,31 @@ body {
     overflow-y:hidden;
     overflow-x: hidden;
 }
+
 .Parent
 {
     display: flex;
     justify-content: space-between;
 }
-/* .mainHeading{
-    position:fixed; 
-    top:0;
-    color:white;
-} */
+
 .mainHeading {
-    position: fixed; /* or absolute */
+    position: fixed; 
     top: 0;
-    left: 50%; /* horizontally center the heading */
+    left: 50%;
     transform: translateX(-50%);
     color: white;
-    background-color:none; /* optional: add background color */
-    width: 100%; /* optional: make heading width 100% */
-    padding: 10px 0; /* optional: add padding */
-    text-align: center; /* optional: center text */
-    z-index: 999; /* ensure the heading stays on top */
-    text-decoration: underline;
-    /* background-color: red; */
+    background-color:none;
+    width: 100%; 
+    padding: 10px 0; 
+    text-align: center; 
+    z-index: 999; 
+    
     
 }
 
 .Heading_task
 {
-    font-family: 'Russo-One', sans-serif;
+    font-family: 'Russo One', sans-serif;
     width:400px;
     font-size:30px;
     color:white;
@@ -76,7 +72,7 @@ body {
 
 
 
-    background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%);
+    background: linear-gradient(133.41deg, #b66b6b4b 26.56%, #526fbd33 92.42%);
 
 
     width:400px;
@@ -86,9 +82,9 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     /* background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%); */
-    opacity: 0.29;
+    /* opacity: 0.29; */
     /* border: 5px solid #FF0000; */
-    /* border-radius: 30px; */
+    border-radius: 6px;
     
 
 }
@@ -113,7 +109,9 @@ body {
     font-family: 'Russo-One', sans-serif;
     width:400px;
     font-size:30px;
-    color:black;
+
+    color:whiteblack;
+
     /* color: white; */
     background:none;
     
@@ -122,6 +120,7 @@ body {
     /* linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%); */
 
     height: 16vh;
+
     display:flex;
     justify-content:center;
     padding:50px
@@ -150,29 +149,46 @@ body {
     padding: 20px;
     font-family: 'Silkscreen', sans-serif;
 }
+
+
 .red_container{
     border: 1px solid red;
     width: 190.83px;
 height: 213px;
     background-color: red;
     padding: 20px;
+
 }
+
+
+
 .details{
     
     width:347px;
-    
+    background: linear-gradient(133.41deg, #b66b6b4b 26.56%, #526fbd33 92.42%);
     display:flex;
+    justify-content: left;
+    align-items: center;
     margin-bottom: 30px;
     flex-direction: column;
+
+
     width: max-content;
     font-family: 'Russo-one',sans-serif;
+
     padding:10px;
+    margin:10px;
+
     
 
 }
+
+
+
 .Mission-Container {
     padding:20px;
 }
+
 .Missions{
     
     padding:5px;
@@ -194,17 +210,25 @@ text-fill-color: transparent;
 
 }
 .red-card {
-   width: 417.3px;
+   /* width: 417.3px; */
+   width:50vh;
     height: 54.3px;
     display:flex;
     flex-direction: column;
-    background: linear-gradient(90deg, #D91A1A 0%, #D8B9B9 77.6%);
+    background: linear-gradient(90deg, #D91A1A 0%, #de7c7c 77.6%);
     padding:20px;
     margin:15px;
     border-radius:10px;
 
 }
-
+.allMission{
+    overflow:scroll;
+    overflow-x:hidden;  
+    border-color:black;
+    border-width: 20px;
+    background: linear-gradient(133.41deg, #b66b6b4b 26.56%, #526fbd33 92.42%);
+    width:60vh;
+}
 .myMission{
     list-style-type: none;
     height:30px;
@@ -216,9 +240,11 @@ text-fill-color: transparent;
 .Chechi
 {
 
-    background-color: black;
-    border: 3px solid red;
+    /* background-color: black;
+    border: 3px solid red; */
     width:222px;
     height:198.43;
+    left: 0px;
+    top: 96px;
     
 }

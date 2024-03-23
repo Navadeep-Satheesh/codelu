@@ -17,7 +17,9 @@ const Home = () => {
       <Routes>
         <Route index element = { <Dashboard />} />
         <Route path="/AskUs" element = { <AskUs/>} />
-        <Route path="/Communitty" element = { <Community/>} />
+        <Route path="/Community" element = { <Community/>}>
+          <Route path = "/Friends" element = { <Community/>} />
+          </Route>
         <Route path="/Courses" element = { <Courses/>} />
       </Routes>
       

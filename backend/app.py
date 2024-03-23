@@ -7,8 +7,9 @@ import jwt
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "codelu"
 
-connection = connector.connect( user = "root", host = "127.0.0.1" , password = "password", database = "mindmentor")
+connection = connector.connect( user = "root", host = "localhost" , password = "jiya", database = "mindmentor")
 cursor = connection.cursor()
+
 
 
 def token_required(f):
@@ -69,7 +70,9 @@ def signup():
 
     cursor.execute(f"insert into users valuess( default , '{full_name}' , '{username}' , '{email}' ,  '{password}' , 0)")
     connection.commit()
+    
     cursor.execute(f"select userid from users where email='{email}'")
+    cursor.execute(f"insert into friends values('{userid}','{full_name}','{userid}')")
     userid=cursor.fetchone()
     
     session['email']=email
@@ -90,7 +93,7 @@ def check_login():
         payload = jwt.decode(token, app.config["SECRET_KEY"], algorithms=["HS256"],ignoreExpiration=True)
         return jsonify({ "loggedIn": True }) , 200
     except jwt.InvalidTokenError:
-        return jsonify(loggedIn=True), 401
+        return jsonify({"loggedIn":"True"}), 401
     
     
 # @app.route('/courses',methods=['GET','POST'])
@@ -103,7 +106,7 @@ def check_login():
 #     course_list = [course[0] for course in courses]
 #     return jsonify({'courses': course_list}), 200
 
-@app.route('/dashboard')
+@app.route('/dashboard', methods=['GET','POST'])
 def dashboard():
     email = session.get('email')
 
@@ -141,8 +144,48 @@ def dashboard():
         # Handle case where user is not logged in
         return jsonify({'message': 'User not logged in'}), 401
     
-    
+
+@app.route('/communities')
+def get_user_communities():
+    userid=session.get('userid')
+    cursor.execute(f"select cname from community where memberid='{userid}'")
+    response_data={
+        "cname":[row[0] for row in cursor.fetchall()]
+    }
+    return jsonify(response_data),200
+
+@app.route('/friends',methods=['POST','DELETE'])
+def leaderboard ():
+    userid=session.get('userid')
+    d=request.json
+    method=d.get("method")
+    if(method == 'POST'):
+        f_username=d.get("username")
+        cursor.execute(f"select userid,fullname from users where username='{f_username}'")
+        data=cursor.fetchall()
+        cursor.execute(f"insert into table friends values('{data[0]}','{data[1]}','{userid}')")
+        connection.commit()
+        cursor.execute(f"SELECT f.fid, u.username,u.fullname, u.score,u.level FROM friends f JOIN users u ON f.fid = u.userid WHERE u.userid = '{userid}' ORDER BY u.score ASC;")
+        friends=cursor.fetchall()
+        return jsonify(friends),200
+    elif(method=='DELETE'):
+        f_username=d.get("username")
+        userid=session.get("userid")
+        cursor.execute(f"select userid from users where username='{f_username}'")
+        fid=cursor.fetchone()
+        cursor.execute(f"delete from friends where userid='{userid}'and fid='{fid}'")
+        connection.commit()
+        cursor.execute(f"SELECT f.fid, u.username,u.fullname, u.score,u.level FROM friends f JOIN users u ON f.fid = u.userid WHERE u.userid = '{userid}' ORDER BY u.score ASC;")
+        friends=cursor.fetchall()
+        return jsonify(friends),200
         
+    
+   
+    
+    
+    
+    
+    
 
     
     
@@ -187,4 +230,4 @@ def dashboard():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug = True,host='0.0.0.0')
