@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function Welcome() {
 
-    let [signInPage, setSignInPage] = useState(true);
+    let [signInPage, setSignInPage] = useState(false);
 
     return (
 

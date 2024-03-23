@@ -5,14 +5,13 @@ import {useState, useEffect} from 'react';
 const Dashboard = () => {
     const[details,setDetails] = useState(null);
     useEffect(() => {
-        fetch('/Dashboard/', {
+        fetch('/api/Dashboard', {
             method: "POST",
             headers: {
-                "content-Type": "application/json"
+                "Content-Type": "application/json"
             }
         })
-        .then(response => response.json())
-        .then(data => {
+        .then(response => response.json()).then(data => {
             setDetails(data);
         })
         .catch(error => {
