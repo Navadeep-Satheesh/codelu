@@ -1,5 +1,6 @@
 
 import { BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 // import Home from "./Pages/Home.jsx";
 // import LoginPage from "./Pages/LoginPage.jsx";
 import AskUs from "./AskUs.jsx";
@@ -22,6 +23,7 @@ const Home = () => {
         <NavBar/>
       <Routes>
         <Route index element = { <Dashboard />} />
+<<<<<<< HEAD
         <Route path="/chatbot" element = { <AskUs/>} />
         <Route path="/Communitty" element = { <Community/>} />
         <Route path="/Courses" element = { <Courses/> } > 
@@ -38,6 +40,18 @@ const Home = () => {
     
     
     
+=======
+        <Route path="/AskUs" element = { <AskUs/>} />
+        <Route path="/Community" element = { <Community/>}>
+          <Route path = "Friends" element = { <Community/>} />
+          
+          </Route>
+
+        <Route path="/Courses" element = { <Courses/>} />
+      </Routes>
+      
+      </Router>
+>>>>>>> ee69e11b8ea423c128f2fe4774747b771930b106
     </div>
   )
 }
