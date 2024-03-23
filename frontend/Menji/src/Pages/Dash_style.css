@@ -104,28 +104,7 @@ height: 213px;
 
 .Missions{
     list-style-type: none;
-    /* MISSIONS */
-
-
-width: 228px;
-height: 46px;
-left: 1046px;
-top: 486px;
-
-font-family: 'Russo One';
-font-style: normal;
-font-weight: 400;
-font-size: 38px;
-line-height: 46px;
-/* identical to box height */
-text-align: center;
-letter-spacing: 0.11em;
-
-background: linear-gradient(90deg, #FDF3F3 0%, #000000 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-/* background-clip: text;
-stext-fill-color: transparent; */
+    
 
 
 }
@@ -150,7 +129,8 @@ stext-fill-color: transparent; */
 
 }
 .myMission{
-
+    height:30px;
+    color:white;
 }
 .Chechi
 {
