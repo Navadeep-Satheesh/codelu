@@ -36,8 +36,7 @@ body {
     padding: 10px 0; /* optional: add padding */
     text-align: center; /* optional: center text */
     z-index: 999; /* ensure the heading stays on top */
-    text-decoration: underline;
-    /* background-color: red; */
+    
     
 }
 
@@ -88,7 +87,7 @@ body {
     /* background: linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%); */
     opacity: 0.29;
     /* border: 5px solid #FF0000; */
-    /* border-radius: 30px; */
+    border-radius: 6px;
     
 
 }
