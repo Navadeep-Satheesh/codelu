@@ -17,7 +17,7 @@ const Dashboard = () => {
             </div>
             
         </div>
-        <div className="side-contents">
+        <div className="right">
             <div className="red-container">
                 <img src={Bitmoji} alt="Logo" className="Chechi" />
             </div>
@@ -31,8 +31,10 @@ const Dashboard = () => {
             </div>
             <div className="Missions">
                 <span className="Missions">Missions</span>
-                <li className="myMission">Front-End Development</li>
-                <li className="myMission">Back-End Development</li>
+                <div className="red-card">
+                <span className="myMission">Back-End Development</span>
+                <span className="myMission">Front-End Development</span>
+                </div>
             </div>
         </div>
     </div>
