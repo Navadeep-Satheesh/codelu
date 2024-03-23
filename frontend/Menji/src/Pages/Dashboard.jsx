@@ -5,10 +5,7 @@ import {useState, useEffect} from 'react';
 const Dashboard = () => {
     const[details,setDetails] = useState(null);
     useEffect(() => {
-<<<<<<< HEAD
-=======
 
->>>>>>> d1bd10a53181c3a5e5a6cbacb65e4d0d13bc5b0e
         fetch('/api/Dashboard', {
             method: "POST",
             headers: {
@@ -22,8 +19,6 @@ const Dashboard = () => {
             console.error('Error fetching data:', error);
         });
     }, []);
-
-
   return (
     <div className="Parent">
         <h1 className="mainHeading">DASH BOARD</h1>
