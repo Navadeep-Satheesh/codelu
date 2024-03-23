@@ -4,39 +4,6 @@ import { useState } from "react";
 
 function Welcome(props) {
 
-    function login(event){
-
-        event.preventDefault();
-
-        let email = document.getElementsByClassName("email")[0].value;
-        let password = document.getElementsByClassName("password")[0].value;
-
-        
-
-        fetch("/api/signin", {
-
-
-            method : "POST" ,
-            headers: {
-                "Content-Type": "application/json"
-            }, 
-            body: JSON.stringify( {
-                email: email, 
-                password : password
-            })
-        }).then((response)=>{
-
-            return response.json()
-        }).then((responseJson)=>{
-
-            console.log(responseJson)
-            if(responseJson['result']==2){
-                
-                props.setSignedIn(true)
-            }
-        })
-    }
-
     let [signInPage, setSignInPage] = useState(false);
 
     return (

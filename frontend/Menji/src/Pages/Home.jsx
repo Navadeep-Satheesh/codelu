@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router,Routes,Route, BrowserRouter} from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+
 // import Home from "./Pages/Home.jsx";
 // import LoginPage from "./Pages/LoginPage.jsx";
 import AskUs from "./AskUs.jsx";
@@ -22,6 +22,7 @@ const Home = () => {
       <Router>
         <NavBar/>
       <Routes>
+<<<<<<< HEAD
         <Route index element = { <Dashboard />} />
 <<<<<<< HEAD
         <Route path="/chatbot" element = { <AskUs/>} />
@@ -41,6 +42,9 @@ const Home = () => {
     
     
 =======
+=======
+        <Route path = "/Dashboard" element = { <Dashboard />} />
+>>>>>>> b27222762ae6e6db3f0e1f5002e5a4cc4b905031
         <Route path="/AskUs" element = { <AskUs/>} />
         <Route path="/Community" element = { <Community/>}>
           <Route path = "Friends" element = { <Community/>} />
