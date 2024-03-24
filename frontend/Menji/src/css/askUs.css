@@ -1,0 +1,116 @@
+.askUs{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    background: linear-gradient(240.81deg, #090633 6.79%, #180A14 67.77%, #1F0202 99.57%, #081F41 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+
+}
+
+.chat_area{
+
+    width: 60vw;
+    height: 80vh;
+    background-color: rgba(60, 60, 60, 0.47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.chatbox{
+    /* background-color: rgb(36, 36, 36); */
+    width: 100%;
+    height: 90%;
+    padding: 30px;
+    overflow-y: scroll;
+
+}
+
+.chatbox ::-webkit-scrollbar-tthump {
+    width: 5px;
+    background-color: red;
+}
+
+.message_input_area{
+    background-color: rgb(148, 148, 255);
+    background-color: rgb(61, 61, 61);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message_input_area input{
+    width: 78%;
+    border: 0px;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    height: 80%;
+}
+
+.message_input_area button{
+    background-color: rgb(255, 108, 108);
+    color: white;
+    height: 80%;
+    border-radius: 10px;
+    border: 0px;
+    width: 20%;
+}
+.message_input_area button:hover{
+    background-color: rgb(250, 104, 104);
+}
+
+.bot_message{
+    color: white;
+    /* background-color: red; */
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bot_message .innerMessage{
+
+    width: 50%;
+    background-color: rgb(127, 127, 255);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.user_message{
+    color: white;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: blue;
+     */
+}
+
+.user_message .innerMessage{
+
+    width: 50%; 
+    border-radius: 10px;
+    background-color: rgb(205, 68, 255);
+    padding: 10px;
+    margin: 10px;
+}
+
+.innerMessage span{
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}

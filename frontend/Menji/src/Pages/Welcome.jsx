@@ -2,7 +2,7 @@ import React from "react";
 import "../css/welcome.css"
 import { useState } from "react";
 
-function Welcome() {
+function Welcome(props) {
 
     let [signInPage, setSignInPage] = useState(false);
 
@@ -39,7 +39,7 @@ function Welcome() {
                             <input type="text" placeholder = "Username" className="email" required />
                             <input type="text" className="password" placeholder="Password" required />
 
-                            <button className="login" >LOGIN</button>
+                            <button className="login" onClick={(event)=>{login(event)}} >LOGIN</button>
 
                             </form>
 
