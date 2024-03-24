@@ -30,7 +30,7 @@ body {
     color: white;
     background-color:none;
     width: 100%; 
-    padding: 10px 0; 
+    padding: 30px 0; 
     text-align: center; 
     z-index: 999; 
     
@@ -114,8 +114,9 @@ body {
 
     /* color: white; */
     background:none;
-    
-    border: none;
+    color:white;
+    font-size:27px;
+    border-bottom: 3px solid black;
     /* border: 3px solid #d9bdbd; */
     /* linear-gradient(133.41deg, #835555 26.56%, #7E8CB2 92.42%); */
 
@@ -167,18 +168,16 @@ height: 213px;
     width:347px;
     background: linear-gradient(133.41deg, #b66b6b4b 26.56%, #526fbd33 92.42%);
     display:flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     flex-direction: column;
-
-
     width: max-content;
     font-family: 'Russo-one',sans-serif;
-
+    border-radius: 6px;
     padding:10px;
     margin:10px;
-
+    
     
 
 }
