@@ -6,16 +6,30 @@ import Dashboard from './Dashboard.jsx';
 import Community from './Community.jsx';
 import Courses from './Courses.jsx';
 import Friends from './Friend.jsx';
+import NavBar from './navbar.jsx';
+import AllCourses from './AllCourses.jsx';
+import CourseDetails from './CourseDetails.jsx';
+
+
 
 const Home = () => {
   return (
     <Router>
+
+      <NavBar/>
+
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/AskUs" element={<AskUs />} />
+        <Route id path="/" element={<Dashboard />} />
+        <Route path="/chatbot" element={<AskUs />} />
         <Route path="/Community" element={<Community />}/>
         <Route path="/Friends" element={<Friends />} />
-        <Route path="/Courses" element={<Courses />} />
+        <Route path="/courses" element={<Courses />} >
+
+        <Route path="" element={<AllCourses />} />
+        <Route path=":id" element={<CourseDetails />} />
+
+
+        </Route>
       </Routes>
     </Router>
   );

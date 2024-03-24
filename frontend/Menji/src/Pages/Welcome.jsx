@@ -6,6 +6,32 @@ function Welcome(props) {
 
     let [signInPage, setSignInPage] = useState(false);
 
+    function login(event){
+        event.preventDefault();
+        fetch("/api/signin", {
+            method: "POST", 
+            headers:{
+                "Content-Type":"application/json"
+            }, 
+            body : JSON.stringify( {
+
+                email : document.getElementsByClassName("email")[0].value,
+                password : document.getElementsByClassName("password")[0].value
+
+            }
+            )
+        }).then((response)=>{
+            return response.json()
+        }).then((responseJson)=>{
+
+            if(responseJson['result'] == 2){
+                 props.setSignedIn(true)
+            }
+        })
+
+
+    }
+
     return (
 
         <>
@@ -36,8 +62,8 @@ function Welcome(props) {
 
                             <h3>SIGN IN</h3>
 
-                            <input type="text" placeholder = "Username" className="email" required />
-                            <input type="text" className="password" placeholder="Password" required />
+                            <input type="text" placeholder = "Username" className="email" required  name = "email"  />
+                            <input type="text" className="password" placeholder="Password" required name="password"/>
 
                             <button className="login" onClick={(event)=>{login(event)}} >LOGIN</button>
 

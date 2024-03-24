@@ -59,7 +59,9 @@ const AskUs = () => {
             </div>
 
             <div className="message_input_area">
-                <input type="text" id=  "message_input_box" />
+                <input type="text" id=  "message_input_box" 
+                placeholder='Ask us anything'
+                />
                 <button onClick={(event)=>{
                     event.preventDefault();
                     let message = document.getElementById("message_input_box").value ;

@@ -68,8 +68,8 @@ const Dashboard = () => {
                 <div className="details">
                     
                     <h3 className="info">User-Name: Ski</h3>
-                    <h3 className="info">Email: ijewej@gmaol.com</h3>
-                    <h3 className="info">Exp : 190</h3>
+                    <h3 className="info">Email: navadeepsatheesh@gmail.com</h3>
+                    <h3 className="info">Exp : 160</h3>
                     <h3 className="info">Level:10</h3>
 
                 </div>

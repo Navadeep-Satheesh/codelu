@@ -26,6 +26,7 @@
     margin-left: 9vw;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     /* background-color: red; */
 }
@@ -39,6 +40,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit ,  minmax( 400px , 400px) );
     row-gap: 100px;
+    flex-direction: column;
 }
 
 .singleCourse {
@@ -83,4 +85,12 @@
 
 .singleCourse button:hover{
     background-color: red;
+}
+
+.courses_container h1{
+    color: white;
+    width: 86%;
+    /* background-color: red; */
+
+    margin: 20px;
 }

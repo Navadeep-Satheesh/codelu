@@ -1,5 +1,6 @@
 .navbar {
-    background-color: #671919;
+    /* background-color: #671919; */    
+    background-color: #ea2b2b7d;
     height: 98vh;
     
     width: 5vw;
@@ -13,6 +14,7 @@
     align-items: center;
     transition: 0.2s;
     z-index: 10;
+    margin:8px;
     /* overflow: hidden; */
 
 
@@ -26,10 +28,11 @@
     flex-direction: column;
     height: max-content;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
     overflow: hidden;
     padding-left: 0px;
+    height:80%;
 
 }
 

@@ -32,10 +32,12 @@ const AllCourses = () => {
 
   return (
     // <div className="courses">
-
+    <>
       <div className="courses_container">
 
+    <h1>My Courses</h1>
         <div className="allCourses">
+
 
           {console.log(courses)}
 
@@ -64,7 +66,11 @@ const AllCourses = () => {
 
       </div>
 
+      </>
+
     // </div>
+
+
   )
 }
 
